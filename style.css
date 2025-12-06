@@ -1,0 +1,255 @@
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inter", sans-serif;
+    background:#0f1117;
+    color:#e7e9ec;
+    min-height:100vh;
+}
+
+/* ================= NAVBAR ================= */
+.toolbox-cont{
+    background:#1a1d25;
+    padding:1rem 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #272b35;
+    box-shadow:0 4px 20px rgba(0,0,0,0.3);
+}
+
+.brand-title{
+    font-size:1.6rem;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#ffffff;
+}
+
+.brand-title i{
+    color:#8b5cf6;
+}
+
+/* ================= FILTER COLOR DOTS ================= */
+.toolbox-priority{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#9aa0ad;
+    font-size:.9rem;
+}
+
+.color-filters{
+    display:flex;
+    gap:10px;
+}
+
+.color{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    cursor:pointer;
+    border:3px solid transparent;
+    transition:.3s;
+}
+
+.color:hover{
+    transform:scale(1.1);
+}
+
+/* Priority Colors (Dark Theme Accents) */
+.lightpink{background:#ff5c8a;}
+.lightgreen{background:#3bcf91;}
+.lightblue{background:#4ea8ff;}
+.black{background:#1e1e1e; border:2px solid #fff3;}
+
+/* ================= ACTION BUTTONS ================= */
+.action-btn-cont{
+    display:flex;
+    gap:1rem;
+}
+
+.add-btn,.remove-btn{
+    padding:.7rem 1.3rem;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+    transition:.25s;
+}
+
+/* Button Styling */
+.add-btn{
+    background:#3bcf91;
+    color:#000;
+}
+.add-btn:hover{
+    background:#29b47a;
+    transform:translateY(-3px);
+}
+
+.remove-btn{
+    background:#f44336;
+    color:#fff;
+}
+.remove-btn:hover{
+    background:#d63228;
+    transform:translateY(-3px);
+}
+
+/* ================= MAIN TASK GRID ================= */
+.main-cont{
+    padding:2rem;
+    display:grid;
+    gap:1.4rem;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+}
+
+/* ================= TASK CARD ================= */
+.ticket-cont{
+    background:#1f232c;
+    border-radius:14px;
+    padding:1rem;
+    box-shadow:0px 6px 25px rgba(0,0,0,0.25);
+    transition:.3s;
+    position:relative;
+    cursor:pointer;
+}
+
+.ticket-cont:hover{
+    transform:translateY(-4px);
+    box-shadow:0px 12px 40px rgba(0,0,0,0.45);
+}
+
+.ticket-color{
+    width:100%;
+    height:6px;
+    border-radius:4px;
+    margin-bottom:.5rem;
+}
+
+.ticket-id{
+    font-size:.8rem;
+    color:#8890a0;
+    margin-bottom:.5rem;
+    font-weight:500;
+}
+
+.task-area{
+    font-size:1rem;
+    line-height:1.4rem;
+    min-height:60px;
+    color:#e7e9ec;
+}
+
+/* lock icon */
+.ticket-lock{
+    position:absolute;
+    right:10px;
+    top:10px;
+    opacity:.6;
+    color:#cfcfcf;
+    font-size:1rem;
+}
+
+/* ================= MODAL ================= */
+.modal-cont{
+    position:fixed;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    width:55%;
+    max-width:650px;
+    display:flex;
+    background:#1f232c;
+    border-radius:18px;
+    box-shadow:0 25px 80px rgba(0,0,0,0.6);
+    overflow:hidden;
+    z-index:999;
+}
+
+.hidden{display:none;}
+
+/* LEFT */
+.modal-left{
+    width:35%;
+    padding:2rem;
+    background:#2b3240;
+    color:white;
+}
+
+.modal-left h2{
+    font-size:2.1rem;
+    margin-bottom:.6rem;
+    line-height:2.6rem;
+    color:#ffffff;
+}
+
+/* RIGHT */
+.modal-right{
+    width:65%;
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:1.2rem;
+}
+
+.textArea-cont{
+    width:100%;
+    height:120px;
+    background:#2b3240;
+    border:none;
+    color:white;
+    border-radius:10px;
+    padding:1rem;
+    resize:none;
+}
+
+/* Priority buttons */
+.priority-buttons{
+    display:flex;
+    gap:1rem;
+}
+
+.priority-option{
+    width:55px;height:55px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    border:3px solid transparent;
+    color:white;
+}
+
+.priority-option:hover{
+    transform:scale(1.1);
+}
+
+.priority-option.active{
+    border-color:#8b5cf6;
+}
+
+/* FOOTER */
+.hint{
+    text-align:center;
+    font-size:.9rem;
+    color:#b4bac7;
+}
+
+kbd{
+    background:#8b5cf6;
+    padding:4px 7px;
+    border-radius:6px;
+    color:white;
+}

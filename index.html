@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <div class="toolbox-cont">
+        
+        <h1 class="brand-title">
+            <i class="fa-solid fa-list-check"></i> TaskFlow
+        </h1>
+
+        <div class="toolbox-priority">
+            <span>Filter by Priority:</span>
+            <div class="color-filters">
+                <div class="lightpink color"></div>
+                <div class="lightgreen color"></div>
+                <div class="lightblue color"></div>
+                <div class="black color"></div>
+            </div>
+        </div>
+
+        <div class="action-btn-cont">
+            <div class="add-btn"><i class="fa-solid fa-plus"></i> Add Task</div>
+            <div class="remove-btn"><i class="fa-solid fa-trash"></i> Delete</div>
+        </div>
+
+    </div>
+
+    <!-- TASK GRID -->
+    <div class="main-cont" id="ticket-container">
+        <div class="ticket-cont">
+            <div class="ticket-color lightpink"></div>
+            <div class="ticket-id">#12345</div>
+            <div class="task-area">Sample Task</div>
+            <div class="ticket-lock"><i class="fa-solid fa-lock"></i></div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-cont hidden">
+
+        <div class="modal-left">
+            <h2>Create<br>New<br>Task</h2>
+            <p>Enter your task details and select priority</p>
+        </div>
+
+        <div class="modal-right">
+
+            <textarea class="textArea-cont" placeholder="Enter your task description..."></textarea>
+
+            <div class="priority-select">
+                <span>Select Priority:</span>
+
+                <div class="priority-buttons">
+                    <div class="priority-option lightpink active"><span>H</span></div>
+                    <div class="priority-option lightgreen"><span>M</span></div>
+                    <div class="priority-option lightblue"><span>L</span></div>
+                    <div class="priority-option black"><span>C</span></div>
+                </div>
+            </div>
+
+            <p class="hint">Press <kbd>Shift</kbd> to Create Task</p>
+
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/shortid-dist"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
